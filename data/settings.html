@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	
+	<title>WiFi Temp-Monitor</title>
+	
+	<meta name="description" content="Opis w Google" />
+	<meta name="keywords" content="słowa, kluczowe, wypisane, po, porzecinku" />
+	
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link href="css/fontello.css" rel="stylesheet" type="text/css" />
+	<link rel="icon" type="image/png" href="favicon.ico">
+	
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<div class="logo">
+				<i class="icon-temperatire"></i><span style="color: #d84b6c">WiFi</span> Temp-Monitor
+			</div>
+		</div>
+		
+		<div class="nav">
+			<ol>
+				<li><a href="index.html">Chart</a> </li>
+				<li><a href="settings.html">Settings</a> </li>
+				<li><a href="database.html">Database</a> </li>
+				<li><a href="about.html">About</a> </li>		
+			</ol>
+		</div>
+		
+		<div class="content" style="text-align: center">
+		
+			<form action="javascript:;" onsubmit="myFunction(this)">
+				<div id="inputs">
+					<h3><u>Access to network</u></h3><br>
+					<b>SSID: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </b>
+					<input type="text" name="ssid" id="ssid"><br>
+					<br>				
+					<b>pasword: &nbsp;</b>
+					<input type="password" name="password" id="password">
+					<input type="checkbox" id="eye" onclick="if(password.type=='text')password.type='password'; else password.type='text';"> Show<br>
+					<br>
+					
+					<h3><u>MySQL server</u></h3><br>
+					<b>server IP: &nbsp;&nbsp;</b>
+					<input type="text" name="mySqlServerIp" id="mySqlServerIp" title="ex. 192.168.1.12"><br>
+					<br>
+					
+					<h3><u>ESP8266</u></h3><br>
+					<b>MAC:</b> &nbsp;&nbsp;&nbsp; 2c:3a:e8:0c:b5:20<br><br>
+					<b>static IP: &nbsp;&nbsp;</b>
+					<input type="text" name="espIp" id="espIp" title="ex. 192.168.1.66"><br>
+					<br>
+					<b>gateway: &nbsp;&nbsp;</b>
+					<input type="text" name="espGateway" id="espGateway" title="ex. 192.168.1.66"><br>
+					<br>
+					<b>subnet: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+					<input type="text" name="espSubnet" id="espSubnet" title="ex. 255.255.255.0"><br>
+					<br>
+					<br>
+					<input type="submit" value="Set" title="Requires restart to take effect">
+					<input type="reset" value="Reset">
+				</div>	
+			</form>
+			
+		</div>
+		
+		<div id="footer">Copyright &copy; 2017 - Wojciech Boguta 209175 - All rights reserved.</div>
+		
+		
+		
+		
+	</div>
+	
+	
+	<script src="settings.js"></script>
+	
+	
+</body>
+</html>

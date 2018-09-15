@@ -1,0 +1,123 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(Lato-Regular.ttf);
+}
+
+body {
+	background-color: #ffffff;
+	color: #000000;
+	font-family: myFirstFont;
+	margin: 0 !important; /* disable default webbrowser margins */
+}
+
+.wrapper{
+	width: 100%;
+	min-width: 720px;
+}
+
+.header {
+	width:100%;
+	padding: 10px 0;
+}
+
+.logo {
+	width: 600px;
+	font-size: 48px;
+	margin-left: auto;
+	margin-right: auto;
+	letter-spacing: 2px;
+	text-align: center;
+}
+
+.nav {
+	width: 100%;
+	padding: 10px 0 10px 0;
+	background-color: #4070ad;
+	text-align: center;
+	border-top: 1px solid #757b1b;
+	border-bottom: 1px solid #757b1b;
+	min-width: 650px; /* prevent from folding */
+}
+
+.content {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 25px;
+}
+
+.sticky {
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 100; 
+}
+
+ol{
+	padding: 0; /* disable default list paddings */
+	margin: 0; /* disable default list margins */
+	list-style-type: none; /* no numbers */
+	font-size: 18px;
+	height: 35px;
+	line-height: 200%; /* interline */
+	display: inline-block;
+}
+
+ol a{
+	color: #ffffff;
+	text-decoration: none;
+	display: block;
+}
+
+ol > li{
+	float: left;
+	width: 150px;
+	height: 40px;
+	border-right: 1px solid #000000;
+	-webkit-transition-duration: 0.4s; /* safari */
+    transition-duration: 0.4s;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+ol > li:first-child {
+	border-left: 1px solid #000000;
+}
+
+ol > li:hover {
+	background-color: #0f3066;
+}
+
+ol > li:hover > a {
+	color: #d84b6c;
+}
+
+.chart{
+	width:70%; 
+	height:100%; 
+	margin-left: 4%; 
+	margin-right: 2%; 
+	float: left;
+}
+
+.options{
+	float: left;
+	width: 20%;
+	margin-right: 4%;
+}
+
+#footer {
+    position: fixed;
+	text-align: center;
+    bottom: 0;
+    width: 100%;
+	border: 1px solid #d1d2d3;
+	color: #a0a0a0;
+	background-color: white;
+}
+
+#inputs{
+	text-align: left;
+	width: 320px;
+	margin: auto;
+}

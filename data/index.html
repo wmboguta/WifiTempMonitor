@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	
+	<title>WiFi Temp-Monitor</title>
+	
+	<meta name="description" content="Opis w Google" />
+	<meta name="keywords" content="słowa, kluczowe, wypisane, po, porzecinku" />
+	
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link rel="icon" type="image/png" href="favicon.ico">
+	<link href="css/fontello.css" rel="stylesheet" type="text/css" />
+	
+	<script src="Chart.bundle.min.js"></script>
+	<script src="utils.js"></script>
+	
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<div class="header">
+			<div class="logo">
+				<i class="icon-temperatire"></i><span style="color: #d84b6c">WiFi</span> Temp-Monitor
+			</div>
+		</div>
+		
+		<div class="nav">
+			
+			<ol>
+				<li><a href="index.html">Chart</a> </li>
+				<li><a href="settings.html">Settings</a> </li>
+				<li><a href="database.html">Database</a> </li>
+				<li><a href="about.html">About</a> </li>			
+			</ol>
+			
+		</div>
+		
+		<div class="content">
+		
+			<div class="chart">
+				<canvas id="canvas"></canvas>
+			</div>
+			
+			<div class="options">
+				<b><u>OPTIONS</u></b><br>
+				<br>
+				<button type="button" id="start">Start</button><button type="button" id="stop">Stop</button> <br>
+				<br>
+				- Request time: <span id="requestTimeValue">1000</span>ms<br>
+				<input type="range" id="requestTimeRange" min="100" max="10000" value="1000" step="100" oninput="showVal(this.value)" onchange="changeVal(this.value)"><br>
+				<br>
+				- Resolution<br>
+				<form class="demoForm" id="demoForm">
+					<input type="radio" name="res" value="9"> 9 bit<br>
+					<input type="radio" name="res" value="10" checked> 10 bit<br>
+					<input type="radio" name="res" value="11"> 11 bit<br>
+					<input type="radio" name="res" value="11"> 12 bit<br>
+				</form>	
+				<br>
+				<button type="button" id="clearData">Clear data</button> <br>
+				<br>
+				<b><u>INFO</u></b> <br>
+				<span style="font-size: 12px">
+					<br>
+					- Battery: <span id="batteryVoltage">3,72</span>V<br><br>
+					<span id="sensorsSignatures"></span><br>
+				</span>
+			</div>
+			
+		</div>
+		
+		<div id="footer">Copyright &copy; 2017 - Wojciech Boguta 209175 - All rights reserved.</div>
+		
+	
+		
+		
+	</div>
+	
+	
+	<script src="script.js"></script>
+	
+	
+</body>
+</html>
